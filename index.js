@@ -1,5 +1,6 @@
 const {Client, GatewayIntentBits} = require("discord.js")
 const commandsModule = require("./modules/commands.js")
+require("./modules/server.js")
 const fetch = require("node-fetch")
 const fs = require("fs")
 require("dotenv").config()
