@@ -34,9 +34,15 @@ client.on("ready", () => {
                 delete json[r]
                 fs.writeFileSync("./memechannels.json", JSON.stringify(json))
             } else {
-                i.send({
-                    content: i.nsfw && "https://tenor.com/view/breaking-bad-meme-swag-gif-23683094" || i.url
-                })
+                if (i.nsfw){
+                    i.send({
+                        content: "https://tenor.com/view/breaking-bad-meme-swag-gif-23683094"
+                    })
+                } else {
+                    i.send({
+                        content: i.url
+                    })
+                }
                 .then(() => {
                     console.log("sent")
                 })
