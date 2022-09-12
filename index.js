@@ -34,7 +34,7 @@ client.on("ready", () => {
                 delete json[r]
                 fs.writeFileSync("./memechannels.json", JSON.stringify(json))
             } else {
-                let e = 0
+                let e = null
                 if (i.nsfw){
                     e = i.send({
                         content: "https://tenor.com/view/breaking-bad-meme-swag-gif-23683094"
