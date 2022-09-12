@@ -36,7 +36,7 @@ client.on("ready", () => {
             } else {
                 i.send({
                     content: i.nsfw && "https://tenor.com/view/breaking-bad-meme-swag-gif-23683094" || i.url
-                })
+                }) //
                 .then(() => {
                     console.log("sent")
                 })
